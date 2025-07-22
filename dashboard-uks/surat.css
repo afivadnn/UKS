@@ -1,0 +1,318 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Modern outer styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Decorative background elements */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Modern floating action buttons */
+        .print-button {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            z-index: 1000;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .print-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(40, 167, 69, 0.4);
+            background: linear-gradient(45deg, #34ce57, #2dd4aa);
+        }
+
+        .print-button:active {
+            transform: translateY(-1px);
+        }
+
+        .back-button {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            background: linear-gradient(45deg, #6c757d, #5a6268);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            z-index: 1000;
+            box-shadow: 0 8px 25px rgba(108, 117, 125, 0.3);
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(108, 117, 125, 0.4);
+            background: linear-gradient(45deg, #7f8c8d, #6c757d);
+        }
+
+        .back-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* Enhanced container with glassmorphism effect */
+        .container {
+            padding: 100px 20px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Modern print area with enhanced styling */
+        .print-area {
+            width: 21cm;
+            min-height: 29.7cm;
+            padding: 2cm;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .print-area::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f5576c);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .print-area:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 35px 70px rgba(0, 0, 0, 0.2),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Original letter styling maintained */
+        .letter-head {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .school-name {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .school-address {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .letter-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 30px 0 20px;
+            text-decoration: underline;
+        }
+
+        .letter-number {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .letter-body {
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        .letter-closing {
+            text-align: right;
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        .signature-area {
+            margin-top: 80px;
+            text-align: right;
+        }
+
+        .officer-name {
+            font-weight: bold;
+            margin-top: 10px;
+            text-decoration: underline;
+        }
+
+        .patient-details {
+            margin: 20px 0;
+        }
+
+        .patient-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .patient-details td {
+            padding: 8px 0;
+            vertical-align: top;
+        }
+
+        .patient-details td:first-child {
+            width: 150px;
+        }
+
+        .letter-footer {
+            margin-top: 50px;
+            font-size: 12px;
+            text-align: center;
+            color: #777;
+        }
+
+        .school-logo {
+            width: 80px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* Floating elements animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            font-size: 100px;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 10%;
+            font-size: 150px;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: 15%;
+            font-size: 80px;
+            animation-delay: 4s;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 120px 10px 30px;
+            }
+            
+            .print-area {
+                width: 95%;
+                margin: 0 auto;
+                border-radius: 15px;
+            }
+            
+            .print-button, .back-button {
+                padding: 12px 20px;
+                font-size: 14px;
+                top: 20px;
+            }
+            
+            .print-button {
+                right: 20px;
+            }
+            
+            .back-button {
+                left: 20px;
+            }
+        }
+
+        @media print {
+            body {
+                background: #fff !important;
+            }
+            
+            body::before {
+                display: none;
+            }
+
+            .container {
+                padding: 0;
+                min-height: auto;
+            }
+
+            .print-area {
+                box-shadow: none;
+                padding: 0;
+                width: 100%;
+                background: #fff;
+                border-radius: 0;
+                transform: none !important;
+            }
+            
+            .print-area::before {
+                display: none;
+            }
+
+            .print-button, .back-button, .floating-element {
+                display: none !important;
+            }
+        }
